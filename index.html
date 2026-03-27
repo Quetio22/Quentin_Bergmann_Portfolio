@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quentin Bergmann — Développeur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">QB<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-name">Quentin Bergmann</p>
+          <h1 class="hero-title">Apprenti<br>Informaticien<br><span>Développeur</span></h1>
+          <p class="hero-subtitle">
+            <span id="typing-text"></span><span class="cursor"></span>
+          </p>
+          <p class="hero-bio">
+            Passionné par le développement web et l'intégration d'intelligence artificielle dans les projets. Je construis des applications propres, fonctionnelles et bien pensées — du front-end au back-end.
+          </p>
+          <div class="hero-actions">
+            <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+            <a href="skills.html" class="btn btn-outline">Mes compétences</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Quentin Bergmann — Construit avec HTML, CSS &amp; JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const el = document.getElementById('typing-text');
+    typeWriter(el, [
+      'Développeur HTML / CSS / JS',
+      'Développeur Java',
+      'Intégration IA & LLM',
+      'Apprenti passionné',
+    ]);
+  </script>
+
+</body>
+</html>
