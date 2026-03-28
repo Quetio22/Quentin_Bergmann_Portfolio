@@ -1,11 +1,20 @@
-// Active nav link based on current page
 document.addEventListener('DOMContentLoaded', () => {
+  // Active nav link
   const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
-    if (link.getAttribute('href') === page) {
-      link.classList.add('active');
-    }
+    if (link.getAttribute('href') === page) link.classList.add('active');
   });
+
+  // Hamburger menu
+  const burger = document.getElementById('nav-burger');
+  const navEl  = document.querySelector('nav');
+  if (burger && navEl) {
+    burger.addEventListener('click', () => navEl.classList.toggle('nav-open'));
+    // Close on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navEl.classList.remove('nav-open'));
+    });
+  }
 });
 
 // Typing effect
